@@ -12,75 +12,76 @@
 
 -- Create titles tables
 -- For reference and error handling
--- Drop Table titles
+-- DROP TABLE titles
 CREATE TABLE titles (
-  title_id
-  title
-)
-
+  title_id VARCHAR(25) NOT NULL,
+  title VARCHAR(50) NOT NULL
+  PRIMARY KEY(title_id)
+);
 
 -- SELECT * FROM titles
 
 
--- Create employees table
--- For reference and error handling
--- Drop Table employees
-CREATE TABLE employees (
-    emp_no
-    emp_title_id
-    birth_date
-    first_name
-    last_name
-    sex
-    hire_date
-)
-
-
--- SELECT * FROM employees
-
-
 -- Create departments table
 -- For reference and error handling
--- Drop Table department
+-- DROP TABLE department
 CREATE TABLE departments (
-  dept_no
-  dept_name
-)
-
+  dept_no VARCHAR(25) NOT NULL,
+  dept_name VARCHAR(50) NOT NULL,
+  PRIMARY KEY(dept_no)
+);
 
 -- SELECT * FROM department
 
 
--- Create dept_emp table
+-- Create employees table
 -- For reference and error handling
--- Drop Table dept_emp
-CREATE TABLE dept_emp (
-  emp_no
-  dept_no
+-- DROP TABLE employees
+CREATE TABLE employees (
+    emp_no INT NOT NULL,
+    emp_title_id VARCHAR(25) NOT NULL,
+    birth_date DATE NOT NULL,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    sex VARCHAR(5) NOT NULL,
+    hire_date DATE NOT NULL,
+
 )
 
+-- SELECT * FROM employees
+
+
+-- Create dept_emp table
+-- For reference and error handling
+-- DROP TABLE dept_emp
+CREATE TABLE dept_emp (
+  emp_no INT NOT NULL,
+  dept_no VARCHAR(50) NOT NULL,
+
+)
 
 -- SELECT * FROM dept_emp
 
 
 -- Create dept_manager table
 -- For reference and error handling
--- Drop Table dept_manager
+-- DROP TABLE dept_manager
 CREATE TABLE dept_manager (
-  dept_no
-  emp_no
-)
+  dept_no VARCHAR(25) NOT NULL,
+  emp_no INT NOT NULL,
 
+)
 
 -- SELECT * FROM dept_manager
 
 
 -- Create salaries table
 -- For reference and error handling
--- Drop Table salaries
+-- DROP TABLE salaries
 CREATE TABLE salaries (
-  emp_no
-  salary
+  emp_no INT NOT NULL,
+  salary INT NOT NULL,
+  
 )
 
 
