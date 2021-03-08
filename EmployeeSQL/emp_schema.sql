@@ -88,10 +88,6 @@ CREATE TABLE salaries (
   salary INT NOT NULL,
   PRIMARY KEY (emp_no),
   FOREIGN KEY (emp_no) REFERENCES employees(emp_no)
-
-)
-
-
-
+);
 
 -- SELECT * FROM salaries
