@@ -61,11 +61,52 @@ ORDER BY last_name DESC;
 
 -- 6. List all employees in the Sales department, including their employee
 -- number, last name, first name, and department name.
-
+SELECT e.emp_no,
+    e.last_name,
+    e.first_name,
+    d.dept_name
+FROM employees AS e
+JOIN dept_emp AS de
+ON (de.emp_no=e.emp_no)
+JOIN departments AS d
+ON (d.dept_no=de.dept_no)
+WHERE dept_name = 'Sales';
 
 -- 7. List all employees in the Sales and Development departments, including
 -- their employee number, last name, first name, and department name.
-
+SELECT e.emp_no,
+    e.last_name,
+    e.first_name,
+    d.dept_name
+FROM employees AS e
+JOIN dept_emp AS de
+ON (de.emp_no=e.emp_no)
+JOIN departments AS d
+ON (d.dept_no=de.dept_no)
+WHERE dept_name = 'Sales' OR dept_name = 'Development';
 
 -- 8. In descending order, list the frequency count of employee last names,
 -- i.e., how many employees share each last name.
+-- didn't specify which column to descend, so I used total #s
+SELECT last_name, COUNT(last_name) AS "Total_shared_names"
+FROM employees
+GROUP BY last_name
+ORDER BY "Total_shared_names" DESC;
+
+
+-- Epilogue for readme
+SELECT e.last_name,
+	e.first_name,
+	d.dept_name,
+	t.title,
+	s.salary
+FROM employees AS e
+JOIN dept_emp AS de
+ON (de.emp_no=e.emp_no)
+JOIN departments AS d
+ON (d.dept_no=de.dept_no)
+JOIN salaries AS s
+ON (s.emp_no=e.emp_no)
+JOIN titles AS t
+ON (t.title_id = e.emp_title_id)
+WHERE e.emp_no = 499942;
