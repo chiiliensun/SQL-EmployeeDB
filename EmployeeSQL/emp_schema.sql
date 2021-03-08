@@ -13,12 +13,10 @@
 -- Create titles tables
 -- For reference and error handling
 -- Drop Table titles
-
-
-
-
-
-
+CREATE TABLE titles (
+  title_id
+  title
+)
 
 
 -- SELECT * FROM titles
@@ -27,56 +25,63 @@
 -- Create employees table
 -- For reference and error handling
 -- Drop Table employees
-
-
-
-
-
+CREATE TABLE employees (
+    emp_no
+    emp_title_id
+    birth_date
+    first_name
+    last_name
+    sex
+    hire_date
+)
 
 
 -- SELECT * FROM employees
 
--- Create department table
+
+-- Create departments table
 -- For reference and error handling
 -- Drop Table department
-
-
-
-
-
-
+CREATE TABLE departments (
+  dept_no
+  dept_name
+)
 
 
 -- SELECT * FROM department
 
+
 -- Create dept_emp table
 -- For reference and error handling
 -- Drop Table dept_emp
-
-
-
-
-
-
+CREATE TABLE dept_emp (
+  emp_no
+  dept_no
+)
 
 
 -- SELECT * FROM dept_emp
 
+
 -- Create dept_manager table
 -- For reference and error handling
 -- Drop Table dept_manager
-
-
-
-
+CREATE TABLE dept_manager (
+  dept_no
+  emp_no
+)
 
 
 -- SELECT * FROM dept_manager
 
+
 -- Create salaries table
 -- For reference and error handling
 -- Drop Table salaries
-
+CREATE TABLE salaries (
+  emp_no
+  salary
+)
 
 
 
