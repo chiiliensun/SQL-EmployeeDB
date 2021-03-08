@@ -11,6 +11,8 @@
 -- avoid errors.
 
 -- Create titles tables
+-- For reference and error handling
+-- Drop Table titles
 
 
 
@@ -19,10 +21,12 @@
 
 
 
-
+-- SELECT * FROM titles
 
 
 -- Create employees table
+-- For reference and error handling
+-- Drop Table employees
 
 
 
@@ -30,10 +34,11 @@
 
 
 
-
-
+-- SELECT * FROM employees
 
 -- Create department table
+-- For reference and error handling
+-- Drop Table department
 
 
 
@@ -42,10 +47,11 @@
 
 
 
-
-
+-- SELECT * FROM department
 
 -- Create dept_emp table
+-- For reference and error handling
+-- Drop Table dept_emp
 
 
 
@@ -54,17 +60,25 @@
 
 
 
-
-
+-- SELECT * FROM dept_emp
 
 -- Create dept_manager table
+-- For reference and error handling
+-- Drop Table dept_manager
 
 
 
 
 
 
-
-
+-- SELECT * FROM dept_manager
 
 -- Create salaries table
+-- For reference and error handling
+-- Drop Table salaries
+
+
+
+
+
+-- SELECT * FROM salaries
